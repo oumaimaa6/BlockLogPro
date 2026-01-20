@@ -1,0 +1,22 @@
+[
+    {
+        "source": "Apache-Server-01",
+        "message": "Connection attempt failed from 192.168.1.105"
+    },
+    {
+        "source": "Database-Primary",
+        "message": "Query took longer than 2000ms"
+    },
+    {
+        "source": "Load-Balancer",
+        "message": "Health check failed for backend-02"
+    },
+    {
+        "source": "Auth-Service",
+        "message": "User 'admin' logged in successfully"
+    },
+    {
+        "source": "Apache-Server-01",
+        "message": "Restarting service due to memory leak"
+    }
+]

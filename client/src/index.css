@@ -1,0 +1,8 @@
+/* CSS Reset or Global Styles */
+body {
+    background-color: #212529;
+    /* Bootstrap dark gray */
+    color: #f8f9fa;
+    /* Bootstrap light */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+}
