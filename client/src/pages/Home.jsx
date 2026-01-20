@@ -7,6 +7,7 @@ export default function Home() {
 
     // State
     const [source, setSource] = useState('SRV-001')
+    const [status, setStatus] = useState('INFO')
     const [message, setMessage] = useState('System initialization sequence started...')
     const [importedLogs, setImportedLogs] = useState(null)
 
@@ -49,7 +50,7 @@ export default function Home() {
                 await fetch('http://localhost:3000/api/logs', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ source, message, status: 'INFO' })
+                    body: JSON.stringify({ source, message, status })
                 })
                 navigate('/dashboard', { state: { identity, action: 'commit', success: true } })
             } else if (authAction === 'upload' && importedLogs) {
@@ -107,6 +108,20 @@ export default function Home() {
                                         onChange={(e) => setSource(e.target.value)}
                                         placeholder="SRV-001"
                                     />
+                                </div>
+
+                                {/* STATUS */}
+                                <div className="mb-4">
+                                    <label className="form-label text-uppercase small text-light fw-bold">Event Status</label>
+                                    <select
+                                        className="form-select bg-dark text-light border-secondary"
+                                        value={status}
+                                        onChange={(e) => setStatus(e.target.value)}
+                                    >
+                                        <option value="INFO">INFO - General Information</option>
+                                        <option value="WARN">WARN - Warning Event</option>
+                                        <option value="ERROR">ERROR - System Error</option>
+                                    </select>
                                 </div>
 
                                 {/* MESSAGE */}

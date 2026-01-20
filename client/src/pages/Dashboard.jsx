@@ -159,9 +159,9 @@ export default function Dashboard() {
                                             <span className={`badge rounded-pill fw-normal bg-opacity-25 border border-opacity-50
                                                 ${log.status === 'ERROR' ? 'bg-danger text-danger border-danger' :
                                                     log.status === 'WARN' ? 'bg-warning text-warning border-warning' :
-                                                        'bg-success text-success border-success'}`}>
-                                                <i className={`bi me-1 ${log.status === 'ERROR' ? 'bi-x-circle' : log.status === 'WARN' ? 'bi-exclamation-circle' : 'bi-check-circle'}`}></i>
-                                                {log.status === 'ERROR' ? 'Failed' : log.status === 'WARN' ? 'Warning' : 'Verified'}
+                                                        'bg-info text-info border-info'}`}>
+                                                <i className={`bi me-1 ${log.status === 'ERROR' ? 'bi-x-circle' : log.status === 'WARN' ? 'bi-exclamation-circle' : 'bi-info-circle'}`}></i>
+                                                {log.status || 'INFO'}
                                             </span>
                                         </td>
                                         <td className="py-3 small text-white-50 font-monospace text-nowrap">

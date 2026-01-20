@@ -1,0 +1,27 @@
+[
+    {
+        "source": "SRV-WEB-01",
+        "message": "Server started successfully on port 8080.",
+        "status": "INFO"
+    },
+    {
+        "source": "DB-MAIN-02",
+        "message": "High query latency detected on user_table.",
+        "status": "WARN"
+    },
+    {
+        "source": "AUTH-GATEWAY",
+        "message": "Critical: 5 failed login attempts from unknown IP.",
+        "status": "ERROR"
+    },
+    {
+        "source": "SRV-API-03",
+        "message": "API rate limit reached for endpoint /v1/data.",
+        "status": "WARN"
+    },
+    {
+        "source": "SYS-CORE",
+        "message": "Scheduled maintenance completed.",
+        "status": "INFO"
+    }
+]
